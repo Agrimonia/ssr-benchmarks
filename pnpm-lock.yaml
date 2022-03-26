@@ -285,10 +285,12 @@ importers:
       node-stdev: ^1.0.1
       react: ^16.12.0
       react-dom: ^16.12.0
+      react-ssr-prepass: ^1.5.0
       webpack: ^4.41.6
     dependencies:
       '@babel/runtime': 7.9.2
       node-stdev: 1.0.1
+      react-ssr-prepass: 1.5.0_react@16.13.1
     devDependencies:
       '@babel/cli': 7.8.4_@babel+core@7.9.0
       '@babel/core': 7.9.0
@@ -6198,6 +6200,14 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  /react-ssr-prepass/1.5.0_react@16.13.1:
+    resolution: {integrity: sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 16.13.1
+    dev: false
 
   /react/16.12.0:
     resolution: {integrity: sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==}
