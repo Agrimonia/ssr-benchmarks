@@ -1,10 +1,11 @@
 const path = require("path");
 const webpack = require("webpack");
 const vueConfig = require("./vue.loader.config");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   devtool: false,
+  plugins: [new MiniCssExtractPlugin()],
   output: {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "/dist/",
@@ -37,17 +38,9 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: "css-loader?minimize",
-          fallback: "vue-style-loader"
-        })
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       }
     ]
   },
-  // plugins: [
-  //   new ExtractTextPlugin({
-  //     filename: "common.[chunkhash].css"
-  //   })
-  // ]
 };
