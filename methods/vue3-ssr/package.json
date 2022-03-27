@@ -1,0 +1,16 @@
+{
+  "name": "vue3-ssr",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "bench": "node dist/index.js"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@vue/compiler-sfc": "^3.2.31",
+    "node-stdev": "^1.0.1",
+    "rollup": "^2.70.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "vue": "^3.2.31"
+  }
+}
